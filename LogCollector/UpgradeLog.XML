@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LogCollector">
+</Property><Property Name="ソリューション ファイル" Value="D:\_Project\Tool\LogCollector\LogCollector.sln">
+</Property><Property Name="ユーザー オプション ファイル" Value="D:\_Project\Tool\LogCollector\LogCollector.suo">
+</Property><Property Name="Date" Value="2016年9月16日">
+</Property><Property Name="Time" Value="15:03">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="LogCollector.sln" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector.sln としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="" Source="LogCollector.suo" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector.suo としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\LogCollector.csproj" Description="プロジェクト ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\LogCollector.csproj としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\LogCollector.csproj.user" Description="プロジェクト ユーザー ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\LogCollector.csproj.user としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\LogCollector.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\LogCollector.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\frmMain.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\frmMain.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\frmMain.Designer.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\frmMain.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\MonHelper.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\MonHelper.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Program.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Program.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Properties\AssemblyInfo.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Properties\AssemblyInfo.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Properties\Resources.Designer.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Properties\Resources.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Properties\Settings.Designer.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Properties\Settings.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\SettingFile.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\SettingFile.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\ZipHelper.cs" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\ZipHelper.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Properties\Settings.settings" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Properties\Settings.settings としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\frmMain.resx" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\frmMain.resx としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\Properties\Resources.resx" Description="ファイルは正常に D:\_Project\Tool\LogCollector\Backup\Backup\LogCollector\Properties\Resources.resx としてバックアップされました。">
+</Event><Event ErrorLevel="1" Project="LogCollector" Source="LogCollector\LogCollector.csproj" Description="このプロジェクトは .NET Framework 2.0 または 3.0 に対応しています。プロジェクトで新しい .NET Framework を必要とするアセンブリを使用すると、ビルドに失敗します。[プロジェクト] メニューの [プロパティ] をクリックし、[.NET Framework] ボックスの一覧で新しいバージョンを選択することにより、.NET Framework のバージョンを変更できます。Visual Basic では、これは [コンパイル] タブの [詳細コンパイラ オプション] ボタンをクリックすると表示されます。">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\LogCollector.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="LogCollector" Source="LogCollector\LogCollector.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LogCollector.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="LogCollector.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LogCollector" Source="LogCollector\LogCollector.csproj" Description="スキャンが完了しました: プロジェクト ファイルにアップグレードは必要ありません。">
+</Event></UpgradeLog>

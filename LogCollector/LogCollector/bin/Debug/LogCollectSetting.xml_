@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ログ収集設定 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LogCollectFrom>2009-10-02T10:21:31.995+09:00</LogCollectFrom>
+  <LogCollectTo>2009-10-02T10:22:48.479375+09:00</LogCollectTo>
+  <LogSettings>
+    <LogSetting>
+      <isEnable>false</isEnable>
+      <path>C:\</path>
+      <fileName />
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <isEnable>false</isEnable>
+      <path>D:\</path>
+      <fileName>ds</fileName>
+      <exceptPattern />
+    </LogSetting>
+  </LogSettings>
+</ログ収集設定>

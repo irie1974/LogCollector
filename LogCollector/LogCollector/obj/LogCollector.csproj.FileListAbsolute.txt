@@ -1,0 +1,18 @@
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\bin\Debug\LogCollector.exe
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\bin\Debug\LogCollector.pdb
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\LogCollector.frmMain.resources
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\LogCollector.Properties.Resources.resources
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\LogCollector.csproj.GenerateResource.Cache
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\LogCollector.exe
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\obj\Debug\LogCollector.pdb
+C:\Documents and Settings\Andoh\デスクトップ\LogCollector\LogCollector\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\LogCollector.exe
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\LogCollector.pdb
+D:\_Project\Tool\LogCollector\LogCollector\bin\Debug\LogCollector.exe
+D:\_Project\Tool\LogCollector\LogCollector\bin\Debug\LogCollector.pdb
+D:\_Project\Tool\LogCollector\LogCollector\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\ResolveAssemblyReference.cache
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\LogCollector.frmMain.resources
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\LogCollector.Properties.Resources.resources
+D:\_Project\Tool\LogCollector\LogCollector\obj\Debug\LogCollector.csproj.GenerateResource.Cache

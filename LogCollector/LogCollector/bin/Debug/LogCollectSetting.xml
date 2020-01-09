@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ファイル収集設定 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LogCollectFrom>2013-07-01T11:21:09</LogCollectFrom>
+  <LogCollectTo>2020-01-07T15:21:23</LogCollectTo>
+  <LogSettings>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <SearchPattern>AppClose_*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <SearchPattern>Critical_*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <SearchPattern>DebugLog*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <SearchPattern>MainSeqLog*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <SearchPattern>Sch*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>false</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\Scheduler</Path>
+      <SearchPattern />
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\Sequence</Path>
+      <SearchPattern>MainSeqLog*.txt</SearchPattern>
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\PLC</Path>
+      <SearchPattern />
+      <exceptPattern />
+    </LogSetting>
+    <LogSetting>
+      <IsEnable>false</IsEnable>
+      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\PLC</Path>
+      <SearchPattern />
+      <exceptPattern />
+    </LogSetting>
+  </LogSettings>
+</ファイル収集設定>

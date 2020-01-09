@@ -1,0 +1,18 @@
+[Common]
+CollectFromWhen =2000/10/01 17:50:32
+CollectToWhen   =2009/10/01 18:00:52
+
+[Setting_00]
+Path     =C:\
+FileName =*
+Enable   =False
+
+[Setting_01]
+Path     =C:\
+FileName =*
+Enable   =False
+
+[Setting_02]
+FileName=
+Path=D:\
+Enable=True
