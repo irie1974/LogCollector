@@ -30,3 +30,10 @@ D:\WORK\LogCollecter\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollect
 D:\WORK\LogCollecter\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.pdb
 D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.exe
 D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.pdb
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.csprojResolveAssemblyReference.cache
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.frmMain.resources
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.Properties.Resources.resources
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\obj\Debug\LogCollector.csproj.GenerateResource.Cache
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\bin\Debug\LogCollector.exe
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\bin\Debug\LogCollector.pdb
+D:\WORK\LogCollecter\GitClone\LogCollector\LogCollector\LogCollector\bin\Debug\ICSharpCode.SharpZipLib.dll

@@ -5,55 +5,64 @@
   <LogSettings>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <MainPath>D:\WORK\Tigris\MEMC\GKAW001</MainPath>
+      <SubPath>Log</SubPath>
       <SearchPattern>AppClose_*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <MainPath />
+      <SubPath>Log</SubPath>
       <SearchPattern>Critical_*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <MainPath />
+      <SubPath>Log</SubPath>
       <SearchPattern>DebugLog*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <MainPath />
+      <SubPath>Log</SubPath>
       <SearchPattern>MainSeqLog*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log</Path>
+      <MainPath />
+      <SubPath>Log</SubPath>
       <SearchPattern>Sch*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>false</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\Scheduler</Path>
+      <MainPath />
+      <SubPath>Log\Scheduler</SubPath>
       <SearchPattern />
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\Sequence</Path>
+      <MainPath />
+      <SubPath>Log\Sequence</SubPath>
       <SearchPattern>MainSeqLog*.txt</SearchPattern>
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>true</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\PLC</Path>
+      <MainPath />
+      <SubPath>Log\PLC</SubPath>
       <SearchPattern />
       <exceptPattern />
     </LogSetting>
     <LogSetting>
       <IsEnable>false</IsEnable>
-      <Path>C:\WORK\Tigris\MEMC\GKAW001\Log\PLC</Path>
+      <MainPath />
+      <SubPath>Log\PLC</SubPath>
       <SearchPattern />
       <exceptPattern />
     </LogSetting>

@@ -29,12 +29,6 @@ namespace LogCollector
             this.Shown += new EventHandler(frmMain_Shown);
             this.FormClosing += new FormClosingEventHandler( frmMain_FormClosing );
 
-            dgvCollectFolder.CellEndEdit += new DataGridViewCellEventHandler(dgvCollectFolder_CellEndEdit);
-            dgvCollectFolder.CellBeginEdit += new DataGridViewCellCancelEventHandler(dgvCollectFolder_CellBeginEdit);
-            dgvCollectFolder.CellMouseUp += new DataGridViewCellMouseEventHandler(dgvCollectFolder_CellMouseUp);
-            dgvCollectFolder.MouseUp += new MouseEventHandler(dgvCollectFolder_MouseUp);
-            dgvCollectFolder.SizeChanged += new EventHandler(dgvCollectFolder_SizeChanged);
-
             dgvCollectData.CellEndEdit += new DataGridViewCellEventHandler( dgvCollectData_CellEndEdit );
             dgvCollectData.CellBeginEdit += new DataGridViewCellCancelEventHandler( dgvCollectData_CellBeginEdit );
             dgvCollectData.CellMouseUp += new DataGridViewCellMouseEventHandler( dgvCollectData_CellMouseUp );
@@ -70,10 +64,11 @@ namespace LogCollector
 
         void dgvCollectData_SizeChanged(object sender, EventArgs e)
         {
-            dgvCollectData.Columns["Path"].Width = dgvCollectData.Width
+            dgvCollectData.Columns["Main"].Width = dgvCollectData.Width
                                         - dgvCollectData.Margin.Left
                                         - dgvCollectData.Columns["IsEnable"].Width
-                                        - dgvCollectData.Columns["FileName"].Width;
+                                        - dgvCollectData.Columns["FileName"].Width
+                                        - dgvCollectData.Columns["Sub"].Width;
         }
 
         /// <summary>グリッドMouseUpイベント</summary>
@@ -149,7 +144,15 @@ namespace LogCollector
 
             if ( cell.OwningColumn.Name == "IsEnable" )
             {
-                string path = Convert.ToString( dgvCollectData["Path", cell.RowIndex].Value );
+                //メインパスの取得
+                string path = "";
+                for (int i = 0; i <= cell.RowIndex; i++)
+                {
+                    if(Convert.ToString(dgvCollectData["Main", i].Value) != "")
+                        path = Convert.ToString(dgvCollectData["Main", i].Value);
+                }
+
+                path = System.IO.Path.Combine(path, Convert.ToString( dgvCollectData["Sub", cell.RowIndex].Value ));
                 if ( !Directory.Exists( path ) )
                 {
                     cell.Value = false;
@@ -198,18 +201,21 @@ namespace LogCollector
         private void SetupGrid()
         {
             // カラム設定
-            GridHelper.AddCol_TextBox( dgvCollectData, "フォルダPath", "Path", "Path", false );
-            GridHelper.AddCol_TextBox( dgvCollectData, "ファイル名 または検索パターン", "FileName", "FileName", false );
+            GridHelper.AddCol_TextBox(dgvCollectData, "メインフォルダ", "Main", "Main", false);
+            GridHelper.AddCol_TextBox(dgvCollectData, "サブフォルダ", "Sub", "Sub", false);
+            GridHelper.AddCol_TextBox(dgvCollectData, "ファイル名 または検索パターン", "FileName", "FileName", false);
             GridHelper.AddCol_ChkBox( dgvCollectData, "有効", "IsEnable", "IsEnable", true, false, false, false );
 
             // カラムサイズ設定
             //dgvCollectData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvCollectData.Columns["IsEnable"].Width = 35;
-            dgvCollectData.Columns["FileName"].Width = 150;
-            dgvCollectData.Columns["Path"].Width = dgvCollectData.Width 
+            dgvCollectData.Columns["IsEnable"].Width = (int)(dgvCollectData.Width * 0.1);
+            dgvCollectData.Columns["FileName"].Width = (int)(dgvCollectData.Width * 0.2);
+            dgvCollectData.Columns["Sub"].Width = (int)(dgvCollectData.Width * 0.2);
+            dgvCollectData.Columns["Main"].Width = dgvCollectData.Width 
                                                     - dgvCollectData.Margin.Left 
                                                     - dgvCollectData.Columns["IsEnable"].Width 
-                                                    - dgvCollectData.Columns["FileName"].Width;
+                                                    - dgvCollectData.Columns["FileName"].Width
+                                                    - dgvCollectData.Columns["Sub"].Width;
             
             // ユーザーリサイズ可・不可
             dgvCollectData.AllowUserToResizeColumns = true;
@@ -242,7 +248,8 @@ namespace LogCollector
                 dgvCollectData.Rows.Add();
                 dgvCollectData.Rows[i].Cells["IsEnable"].Value = ls.IsEnable;
                 dgvCollectData.Rows[i].Cells["FileName"].Value = ls.SearchPattern;
-                dgvCollectData.Rows[i].Cells["Path"].Value = ls.Path;
+                dgvCollectData.Rows[i].Cells["Sub"].Value = ls.SubPath;
+                dgvCollectData.Rows[i].Cells["Main"].Value = ls.MainPath;
                 i++;
             }
 
@@ -263,7 +270,8 @@ namespace LogCollector
             int settingIdx = 0;
             for ( int rowIdx = 0; rowIdx < dgvCollectData.Rows.Count; rowIdx++ )
             {
-                if ( dgvCollectData["Path", rowIdx].Value == null )
+                if (( dgvCollectData["Main", rowIdx].Value == null ) &&
+                    (dgvCollectData["Sub", rowIdx].Value == null))
                 {
                     continue;
                 }
@@ -275,8 +283,9 @@ namespace LogCollector
 
                 lc.SetCollectSetting( settingIdx,
                     (bool)dgvCollectData["IsEnable", rowIdx].Value,
-                    Convert.ToString( dgvCollectData["Path", rowIdx].Value ),
-                    Convert.ToString( dgvCollectData["FileName", rowIdx].Value ) );
+                    Convert.ToString( dgvCollectData["Main", rowIdx].Value ),
+                    Convert.ToString(dgvCollectData["Sub", rowIdx].Value),
+                    Convert.ToString(dgvCollectData["FileName", rowIdx].Value));
                 
                 settingIdx++;
             }

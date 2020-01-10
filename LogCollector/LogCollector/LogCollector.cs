@@ -15,14 +15,16 @@ namespace LogCollector
     public class LogSetting
     {
         public bool IsEnable = false;
-        public string Path = "";
+        public string MainPath = "";
+        public string SubPath = "";
         public string SearchPattern = "";
         public string exceptPattern = "";
 
-        public LogSetting(bool argIsEnable, string argPath, string argSearchPattern)
+        public LogSetting(bool argIsEnable, string argMain, string argSub, string argSearchPattern)
         {
             IsEnable = argIsEnable;
-            Path = argPath;
+            MainPath = argMain;
+            SubPath = argSub;
             SearchPattern = argSearchPattern;
         }
 
@@ -72,20 +74,21 @@ namespace LogCollector
             set { isProcCollect = value; }
         }
 
-        public void AddCollectSetting( bool isEnable, string path , string fileName  )
+        public void AddCollectSetting( bool isEnable, string mainPath, string subPath , string fileName  )
         {
-            logSettings.Add( new LogSetting( isEnable, path, fileName ) );
+            logSettings.Add(new LogSetting(isEnable, mainPath, subPath, fileName));
         }
 
-        public void SetCollectSetting(int index, bool isEnable, string path, string searchPattern)
+        public void SetCollectSetting(int index, bool isEnable, string mainPath, string subPath, string searchPattern)
         {
             if ( logSettings.Count <= index )
             {
-                AddCollectSetting( isEnable, path, searchPattern );
+                AddCollectSetting(isEnable, mainPath, subPath, searchPattern);
                 return;
             }
             logSettings[index].IsEnable = isEnable;
-            logSettings[index].Path = path;
+            logSettings[index].MainPath = mainPath;
+            logSettings[index].SubPath = subPath;
             logSettings[index].SearchPattern = searchPattern;
         }
 
@@ -115,11 +118,15 @@ namespace LogCollector
                 writeStr = logSettings[i].SearchPattern;
                 iniFile.WriteIniString( section, key, writeStr );
 
-                key = "Path    ";
-                writeStr = logSettings[i].Path;
+                key = "MainPath";
+                writeStr = logSettings[i].MainPath;
                 iniFile.WriteIniString( section, key, writeStr );
 
-                key = "Enable  ";
+                key = "SubPath";
+                writeStr = logSettings[i].SubPath;
+                iniFile.WriteIniString(section, key, writeStr);
+
+                key = "Enable";
                 writeStr = Convert.ToString( logSettings[i].IsEnable );
                 iniFile.WriteIniString( section, key, writeStr );
             }
@@ -159,11 +166,12 @@ namespace LogCollector
                 if ( section == "Common" ) 
                     continue;
 
-                string path = iniFile.ReadIniString( section, "Path" );
-                string fileName = iniFile.ReadIniString( section, "SearchPattern" );
+                string mainPath = iniFile.ReadIniString( section, "MainPath" );
+                string subPath = iniFile.ReadIniString(section, "SubPath");
+                string fileName = iniFile.ReadIniString(section, "SearchPattern");
                 bool isEnable = Convert.ToBoolean( iniFile.ReadIniString( section, "Enable") ) ;
 
-                LogSetting ls = new LogSetting( isEnable, path, fileName );
+                LogSetting ls = new LogSetting(isEnable, mainPath, subPath, fileName);
                 logSettings.Add( ls );
             }
         }
@@ -296,8 +304,15 @@ namespace LogCollector
             }
 
             //設定分ループ
+            string mainPath = "";
             foreach ( LogSetting logSet in logSettings )
             {
+                //メインパスが空白なら前と同じとする
+                if (logSet.MainPath != "")
+                {
+                    mainPath = logSet.MainPath;
+                }
+
                 //有効設定されていないものは処理しない。
                 if ( !logSet.IsEnable )
                 {
@@ -311,12 +326,13 @@ namespace LogCollector
                 }
 
                 //収集設定Path内の保存該当ファイル一覧取得
-                string[] files = Directory.GetFiles( logSet.Path, logSet.SearchPattern );
+                string fullPath = System.IO.Path.Combine(mainPath, logSet.SubPath);
+                string[] files = Directory.GetFiles(fullPath, logSet.SearchPattern);
 
                 //ファイル一覧からファイルを一つ一つ処理
                 foreach ( string file in files )
                 {
-                    string filepath = Path.Combine( logSet.Path, file );
+                    string filepath = Path.Combine(fullPath, file);
                     DateTime lastWrite = File.GetLastWriteTime( filepath );
 
                     // 収集条件（日時）チェック
