@@ -66,5 +66,12 @@
       <SearchPattern />
       <exceptPattern />
     </LogSetting>
+    <LogSetting>
+      <IsEnable>true</IsEnable>
+      <MainPath>D:\Yokogawa\EQBrain Files</MainPath>
+      <SubPath>log</SubPath>
+      <SearchPattern />
+      <exceptPattern />
+    </LogSetting>
   </LogSettings>
 </ファイル収集設定>

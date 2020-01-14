@@ -37,8 +37,10 @@ namespace LogCollector
 
             dtpCollectFrom.Format = DateTimePickerFormat.Custom;
             dtpCollectFrom.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            dtpCollectFrom.Value = DateTime.Now.AddDays(-1);
             dtpCollectTo.Format = DateTimePickerFormat.Custom;
             dtpCollectTo.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            dtpCollectTo.Value = DateTime.Now;
 
             //bindingSrc.DataSource = dataTbl;
             //dgvCollectData.DataSource = bindingSrc;
@@ -173,12 +175,18 @@ namespace LogCollector
             DataGridView dgv = (DataGridView)sender;
             DataGridViewCell cell = dgv.CurrentCell;
 
-            if ( cell.OwningColumn.Name != "Path" )
+            if ( cell.OwningColumn.Name != "Sub" )
             {
                 return;
             }
             
-            string path = Convert.ToString( cell.Value );
+            string path = "";
+            for (int i = 0; i <= cell.RowIndex; i++)
+            {
+                if(dgv["Main", i].Value !="")
+                    path = Convert.ToString(dgv["Main", i].Value);
+            }
+            path = System.IO.Path.Combine(path, Convert.ToString(cell.Value));
 
             if ( Directory.Exists( path ) )
             {
